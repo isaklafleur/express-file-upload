@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-<section>
-  <h2>Upload your photo</h2>
-  <form action="/upload" method="post" enctype="multipart/form-data">
-    <input type="text" name="name">
-    <input type="file" name="photo">
-    <input type="submit" value="Save">
-  </form>
-</section>
 
-<% pictures.forEach(picture => { %>
-      <img src="<%= picture.pic_path %>">
-<% }); %>
+<head>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <section>
+    <h2>Upload your photo</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="text" name="name">
+      <input type="file" name="photo">
+      <input type="submit" value="Save">
+    </form>
+  </section>
+
+  <% pictures.forEach(picture => { %>
+    <img src="<%= picture.pic_path %>">
+    <% }); %>
 
 
 
-  </body>
+</body>
+
 </html>
